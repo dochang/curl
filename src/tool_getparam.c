@@ -179,6 +179,7 @@ static const struct LongShort aliases[]= {
   {"$O", "proxy-service-name",       TRUE},
   {"$P", "service-name",             TRUE},
   {"$Q", "proto-default",            TRUE},
+  {"$R", "include-remote-only",      FALSE},
   {"0",   "http1.0",                 FALSE},
   {"01",  "http1.1",                 FALSE},
   {"02",  "http2",                   FALSE},
@@ -998,6 +999,9 @@ ParameterError getparameter(char *flag,    /* f or -long-flag */
         err = check_protocol(config->proto_default);
         if(err)
           return err;
+        break;
+      case 'R': /* --include-remote-only */
+        config->include_remote_only = toggle;
         break;
       }
       break;

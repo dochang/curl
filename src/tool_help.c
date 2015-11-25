@@ -112,6 +112,7 @@ static const char *const helptext[] = {
   "     --http2         Use HTTP 2 (H)",
   "     --ignore-content-length  Ignore the HTTP Content-Length header",
   " -i, --include       Include protocol headers in the output (H/F)",
+  "     --include-remote-only Include remote headers only in the output (H/F)",
   " -k, --insecure      Allow connections to SSL sites without certs (H)",
   "     --interface INTERFACE  Use network INTERFACE (or address)",
   " -4, --ipv4          Resolve name to IPv4 address",

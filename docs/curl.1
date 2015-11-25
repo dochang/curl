@@ -798,6 +798,12 @@ downloading a file.
 .IP "-i, --include"
 (HTTP) Include the HTTP-header in the output. The HTTP-header includes things
 like server-name, date of the document, HTTP-version and more...
+
+Note, this option displays the headers from the proxy. To display the actual
+remote headers only, use this option with \fI--include-remote-only\fP together.
+.IP "--include-remote-only"
+Include the actual remote HTTP-header only in the output. This option only
+takes effect when \fI-i, --include\fP is used.
 .IP "-I, --head"
 (HTTP/FTP/FILE)
 Fetch the HTTP-header only! HTTP-servers feature the command HEAD

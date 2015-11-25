@@ -767,6 +767,12 @@ CURLcode Curl_setopt(struct SessionHandle *data, CURLoption option,
      */
     data->set.include_header = (0 != va_arg(param, long))?TRUE:FALSE;
     break;
+  case CURLOPT_HEADER_REMOTE_ONLY:
+    /*
+     * Set to include the actual remote header only in the output.
+     */
+    data->set.include_remote_only = (0 != va_arg(param, long))?TRUE:FALSE;
+    break;
   case CURLOPT_NOPROGRESS:
     /*
      * Shut off the internal supported progress meter
