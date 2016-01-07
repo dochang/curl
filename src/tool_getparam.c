@@ -180,6 +180,7 @@ static const struct LongShort aliases[]= {
   {"$P", "service-name",             TRUE},
   {"$Q", "proto-default",            TRUE},
   {"$R", "expect100-timeout",        TRUE},
+  {"$S", "ignore-proxy-headers",     FALSE},
   {"0",   "http1.0",                 FALSE},
   {"01",  "http1.1",                 FALSE},
   {"02",  "http2",                   FALSE},
@@ -1004,6 +1005,8 @@ ParameterError getparameter(char *flag,    /* f or -long-flag */
         err = str2udouble(&config->expect100timeout, nextarg);
         if(err)
           return err;
+      case 'S': /* --ignore-proxy-headers */
+        config->ignore_proxy_headers = toggle;
         break;
       }
       break;

@@ -112,6 +112,7 @@ static const char *const helptext[] = {
   "     --http1.1       Use HTTP 1.1 (H)",
   "     --http2         Use HTTP 2 (H)",
   "     --ignore-content-length  Ignore the HTTP Content-Length header",
+  "     --ignore-proxy-headers  Ignore proxy headers in the output (H)",
   " -i, --include       Include protocol headers in the output (H/F)",
   " -k, --insecure      Allow connections to SSL sites without certs (H)",
   "     --interface INTERFACE  Use network INTERFACE (or address)",

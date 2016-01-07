@@ -1673,6 +1673,9 @@ typedef enum {
   /* Set E-xclusive stream dependency on another CURL handle */
   CINIT(STREAM_DEPENDS_E, OBJECTPOINT, 241),
 
+  /* Only display the headers from the actual remote */
+  CINIT(IGNORE_PROXY_HEADERS, LONG, 242),
+
   CURLOPT_LASTENTRY /* the last unused */
 } CURLoption;
 
